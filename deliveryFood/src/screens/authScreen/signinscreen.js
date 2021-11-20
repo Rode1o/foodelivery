@@ -7,14 +7,14 @@ import {Icon, Button, SocialIcon} from "react-native-elements"
 import Header from "../../components/header";
 import {title} from "../../global/styles";
 
-export default function Signinscreen(){
+export default function Signinscreen({navigation}){
     const[TextInput2Focussed, setTextInput2Focussed] =useState(false)
     const TextInput1 = useRef(1)
     const TextInput2 = useRef(2)
 
     return(
         <View style={styles.container}>
-            <Header title="My Account" type="arrow-left" />
+            <Header title="My Account" type="arrow-left" navigation={navigation}/>
             <View style={{marginLeft:20, marginTop:10}}>
                 <Text style={title}>Sign-In</Text>
             </View>
