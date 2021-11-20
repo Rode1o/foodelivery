@@ -2,6 +2,9 @@ import React from 'react'
 import {createStackNavigator,TransitionPresets} from '@react-navigation/stack'
 import Signinwelcomescreen from "../screens/authScreen/signinwelcomescreen";
 import Signinscreen from "../screens/authScreen/signinscreen";
+import AndroidHorizontalScrollContentViewNativeComponent
+    from "react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollContentViewNativeComponent";
+import Homescreen from "../screens/homescreen";
 
 const Auth = createStackNavigator();
 
@@ -25,6 +28,15 @@ export default function AuthStack(){
                     ...TransitionPresets.RevealFromBottomAndroid
                 }}
                 />
+            <Auth.Screen
+                name = "Homescreen"
+                component = {Homescreen}
+                options = {{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }}
+            />
+
         </Auth.Navigator>
     )
 }
