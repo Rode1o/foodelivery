@@ -6,6 +6,7 @@ import AndroidHorizontalScrollContentViewNativeComponent
     from "react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollContentViewNativeComponent";
 import Homescreen from "../screens/homescreen";
 import rootClientTabs from "./clientTabs";
+import RestaurantMapScreen from "../screens/restaurantMapScreen";
 
 const Auth = createStackNavigator();
 
@@ -38,6 +39,14 @@ export default function AuthStack(){
                 }}
             />
 
+            <Auth.Screen
+                name = "RestaurantMapScreen"
+                component = {RestaurantMapScreen}
+                options = {{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }}
+            />
         </Auth.Navigator>
     )
 }

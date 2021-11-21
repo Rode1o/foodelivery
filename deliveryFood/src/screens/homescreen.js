@@ -19,7 +19,7 @@ import FoodCard from "../components/foodcard";
 
 const SCREEN_WIDTH = Dimensions.get("window").width
 
-export default function Homescreen(){
+export default function Homescreen({navigation}){
     const [delivery, setDelivery] = useState(true)
     const [indexCheck, setindexCheck] = useState("0")
     return(
@@ -43,6 +43,7 @@ export default function Homescreen(){
                     <TouchableOpacity
                         onPress={()=>{
                             setDelivery(false)
+                            navigation.navigate("RestaurantMapScreen")
                         }}
                     >
                         <View style={{...styles.deliveryButton,backgroundColor:delivery?colors.grey2 :colors.buttons}}>
@@ -204,6 +205,24 @@ export default function Homescreen(){
                     }
                 </View>
             </ScrollView>
+            {
+                delivery &&
+                <View style={styles.floatButton}>
+                    <TouchableOpacity
+                        onPress={()=>{
+                            navigation.navigate("RestaurantMapScreen")
+                        }}
+                    >
+                        <Icon
+                            name="place"
+                            type="material"
+                            size={32}
+                            color={colors.buttons}
+                        />
+                        <Text style={{color: colors.grey4}}>Map</Text>
+                    </TouchableOpacity>
+                </View>
+            }
         </View>
     )
 }
@@ -284,4 +303,15 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         color:colors.grey4
     },
+    floatButton:{
+        position:"absolute",
+        bottom:10,
+        right:15,
+        backgroundColor:"#ffffff",
+        elevation:10,
+        width:60,
+        height:60,
+        borderRadius:30,
+        alignItems:"center"
+    }
 })
