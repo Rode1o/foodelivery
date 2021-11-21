@@ -68,7 +68,7 @@ export default function Signinscreen({navigation}){
                     buttonStyle={parameters.styledButton}
                     titleStyle={parameters.buttonTitle}
                     onPress={()=>{
-                        navigation.navigate('Homescreen')
+                        navigation.navigate('rootClientTabs')
                     }}
                 />
             </View>

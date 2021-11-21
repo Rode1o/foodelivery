@@ -5,6 +5,7 @@ import Signinscreen from "../screens/authScreen/signinscreen";
 import AndroidHorizontalScrollContentViewNativeComponent
     from "react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollContentViewNativeComponent";
 import Homescreen from "../screens/homescreen";
+import rootClientTabs from "./clientTabs";
 
 const Auth = createStackNavigator();
 
@@ -29,8 +30,8 @@ export default function AuthStack(){
                 }}
                 />
             <Auth.Screen
-                name = "Homescreen"
-                component = {Homescreen}
+                name = "rootClientTabs"
+                component = {rootClientTabs}
                 options = {{
                     headerShown: false,
                     ...TransitionPresets.RevealFromBottomAndroid
