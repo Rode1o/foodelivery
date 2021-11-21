@@ -6,6 +6,7 @@ import AndroidHorizontalScrollContentViewNativeComponent
     from "react-native/Libraries/Components/ScrollView/AndroidHorizontalScrollContentViewNativeComponent";
 import Homescreen from "../screens/homescreen";
 import rootClientTabs from "./clientTabs";
+import drawerNavigator from "./drawerNavigator";
 import RestaurantMapScreen from "../screens/restaurantMapScreen";
 
 const Auth = createStackNavigator();
@@ -31,8 +32,8 @@ export default function AuthStack(){
                 }}
                 />
             <Auth.Screen
-                name = "rootClientTabs"
-                component = {rootClientTabs}
+                name = "drawerNavigator"
+                component = {drawerNavigator}
                 options = {{
                     headerShown: false,
                     ...TransitionPresets.RevealFromBottomAndroid
