@@ -1,10 +1,12 @@
 import React from "react";
 import {View, Text, StyleSheet} from "react-native";
+import SearchComponent from "../components/searchComponent";
+
 
 export default function SearchScreen(){
     return(
-        <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
-            <Text>Hi2</Text>
+        <View>
+            <SearchComponent/>
         </View>
     )
 }
