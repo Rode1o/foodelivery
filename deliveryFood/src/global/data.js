@@ -7,6 +7,17 @@ export const filterData = [{name:"Fast Food", image: require('../assets/fastfood
     {name:"Seafood", image: require('../assets/seafood.png'), id:"6"},
 ];
 
+export const filterData2 = [
+    {name:"Fast Food", image:"https://image.shutterstock.com/image-photo/closeup-home-made-burgers-on-600w-172259846.jpg", id:"0"},
+    {name:"Burgers", image:"https://image.shutterstock.com/image-photo/beef-burgers-on-wooden-plate-600w-1668890842.jpg", id:"1"},
+    {name:"Salads", image:"https://cdn.stocksnap.io/img-thumbs/960w/garden-lettuce_BPGPKHVGO4.jpg", id:"2"},
+    {name:"Hotdog", image:"https://image.shutterstock.com/image-photo/hot-dog-ketchup-yellow-mustard-600w-1922473676.jpg", id:"3"},
+    {name:"Chinese", image:"https://image.shutterstock.com/image-photo/various-asian-meals-on-rustic-600w-587446385.jpg", id:"4"},
+    {name:"Mexican", image:"https://image.shutterstock.com/image-photo/yellow-corn-nacho-chips-garnished-600w-434647939.jpg", id:"5"},
+    {name:"Sea Food", image:"https://image.shutterstock.com/image-photo/cooked-shrimps-on-plate-lemon-600w-691787479.jpg", id:"6"},
+    {name:"Sea Food", image:"https://image.shutterstock.com/image-photo/cooked-shrimps-on-plate-lemon-600w-691787479.jpg", id:"7"},
+];
+
 export const restaurantData = [{
     restaurantName:"McDonalds", farAway:"12.7", businessAddress:"22 Bessie street, Cape Town",
     images:"https://image.shutterstock.com/image-photo/mcdonalds-big-mac-hamburger-burger-600w-1148955995.jpg",
