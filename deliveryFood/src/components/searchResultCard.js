@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, ImageBackground, TouchableOpacity, FlatList} fro
 import {Icon} from "react-native-elements";
 
 import {colors} from "../global/styles";
+import ProductCard from "./ProductCard";
 
 
 const SearchResultCard = ({
@@ -16,7 +17,9 @@ const SearchResultCard = ({
                               farAway ,
                               averageReview ,
                               images,
-                              productData}) => {
+                              productData
+
+                          }) => {
     return (
         <View>
             <View style={styles.view1}>
@@ -56,6 +59,23 @@ const SearchResultCard = ({
 
                 </View>
             </View>
+            <View style ={{marginTop:5,paddingBottom:20}}>
+                <FlatList
+                    data={productData}
+                    style={{backgroundColor:colors.headersText}}
+                    keyExtractor={(item, index)=>index.toString()}
+                    renderItem={({item, index})=>(
+                        <ProductCard
+                            image = {item.image}
+                            productName ={item.name}
+                            price ={item.price}
+                        />
+
+                    )}
+                    horizontal={true}
+                />
+            </View>
+
         </View>
     )
 }
