@@ -22,43 +22,47 @@ const SearchResultCard = ({
                           }) => {
     return (
         <View>
-            <View style={styles.view1}>
-                <View style={{height:150}}>
-                    <ImageBackground
-                        style = {{height:160}}
-                        source ={{uri:images}}
-                        imageStyle = {styles.imageStyle}
-                    />
+            <TouchableOpacity
+            onPress={OnPressRestaurantCard}
+            >
+                <View style={styles.view1}>
+                    <View style={{height:150}}>
+                        <ImageBackground
+                            style = {{height:160}}
+                            source ={{uri:images}}
+                            imageStyle = {styles.imageStyle}
+                        />
 
-                    <View style ={styles.image}>
-                        <Text style ={styles.text1}>{averageReview}</Text>
-                        <Text style ={styles.text2}> {numberOfReview} reviews</Text>
-                    </View>
-                </View>
-                <View style ={styles.view3}>
-                    <View style ={{paddingTop:5}}>
-                        <Text style ={styles.text5}>{restaurantName}</Text>
-                    </View>
-
-                    <View style ={{flexDirection:"row"}}>
-                        <View style ={styles.view4}>
-                            <Icon
-                                name ="place"
-                                type ="material"
-                                color ={colors.cardComment}
-                                size ={18}
-                                iconStyle ={{marginTop:3,marginLeft:-3}}
-                            />
-
-                            <Text style ={styles.view5}>{farAway}Min</Text>
-                        </View>
-                        <View style ={{flex:9}}>
-                            <Text style ={styles.text6}>{businessAddress}</Text>
+                        <View style ={styles.image}>
+                            <Text style ={styles.text1}>{averageReview}</Text>
+                            <Text style ={styles.text2}> {numberOfReview} reviews</Text>
                         </View>
                     </View>
+                    <View style ={styles.view3}>
+                        <View style ={{paddingTop:5}}>
+                            <Text style ={styles.text5}>{restaurantName}</Text>
+                        </View>
 
+                        <View style ={{flexDirection:"row"}}>
+                            <View style ={styles.view4}>
+                                <Icon
+                                    name ="place"
+                                    type ="material"
+                                    color ={colors.cardComment}
+                                    size ={18}
+                                    iconStyle ={{marginTop:3,marginLeft:-3}}
+                                />
+
+                                <Text style ={styles.view5}>{farAway}Min</Text>
+                            </View>
+                            <View style ={{flex:9}}>
+                                <Text style ={styles.text6}>{businessAddress}</Text>
+                            </View>
+                        </View>
+
+                    </View>
                 </View>
-            </View>
+            </TouchableOpacity>
             <View style ={{marginTop:5,paddingBottom:20}}>
                 <FlatList
                     data={productData}
