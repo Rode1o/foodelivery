@@ -6,7 +6,7 @@ import {colors} from "../global/styles";
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-export default function SearchScreen(){
+export default function SearchScreen({navigation}){
     return(
         <View style ={{flex:1,marginBottom:10,paddingTop:20}}>
             <SearchComponent/>
@@ -16,7 +16,11 @@ export default function SearchScreen(){
                     data={filterData2}
                     keyExtractor ={item=>item.id}
                     renderItem={({item})=>(
-                        <TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback
+                        onPress={()=>{
+                            navigation.navigate("SearchResultScreen",{item:item.name})
+                        }}
+                        >
                             <View style={styles.imageView}>
                                 <ImageBackground
                                     source={{uri:item.image}}
@@ -54,7 +58,11 @@ const Footer = ()=>{
                     data={filterData2}
                     keyExtractor ={item=>item.id}
                     renderItem={({item})=>(
-                        <TouchableWithoutFeedback>
+                        <TouchableWithoutFeedback
+                        onPress={()=>{
+                            navigation.navigate("SearchResultScreen",{item:item.name})
+                        }}
+                        >
                             <View style={styles.imageView}>
                                 <ImageBackground
                                     source={{uri:item.image}}

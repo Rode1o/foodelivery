@@ -7,6 +7,7 @@ import Homescreen from "../screens/homescreen";
 import SearchScreen from "../screens/searchScreen";
 import myOrderScreen from "../screens/myOrderScreen";
 import myAccountScreen from "../screens/myAccountScreen";
+import {clientStack} from "./clientStack";
 
 const clientTabs = createBottomTabNavigator();
 
@@ -37,7 +38,7 @@ export default function rootClientTabs(){
 
             <clientTabs.Screen
                 name="searchScreen"
-                component={SearchScreen}
+                component={clientStack}
                 options={
                     {
                         tabBarLabel : "search",
