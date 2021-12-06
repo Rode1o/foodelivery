@@ -2,7 +2,6 @@ import React,{useState, useRef} from "react";
 
 import {View, Text, StyleSheet, Dimensions, Image} from "react-native"
 import {colors, parameters,} from "../../global/styles"
-import * as Animatable from 'react-native-animatable'
 import Swiper from 'react-native-swiper'
 import {Icon, Button, SocialIcon} from "react-native-elements"
 
@@ -53,6 +52,11 @@ export default function Signinwelcomescreen({navigation}){
                         title={"Create an account"}
                         buttonStyle={styles.createButton}
                         titleStyle={styles.createButtonTitle}
+                        onPress ={
+                            ()=>{
+                                navigation.navigate("SignUpScreen")
+                            }
+                        }
                     />
                 </View>
             </View>
