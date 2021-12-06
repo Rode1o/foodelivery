@@ -52,11 +52,9 @@ export default function Signinwelcomescreen({navigation}){
                         title={"Create an account"}
                         buttonStyle={styles.createButton}
                         titleStyle={styles.createButtonTitle}
-                        onPress ={
-                            ()=>{
-                                navigation.navigate("SignUpScreen")
-                            }
-                        }
+                        onPress={()=>{
+                            navigation.navigate("signupscreen")
+                        }}
                     />
                 </View>
             </View>

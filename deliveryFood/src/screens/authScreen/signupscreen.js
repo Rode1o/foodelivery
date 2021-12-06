@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { StyleSheet, Text, View,ScrollView,TextInput,Alert } from 'react-native'
 import {colors} from '../../global/styles'
-import Header from '../../components/Header'
+import Header from "../../components/header";
 import { Formik } from 'formik';
 import {Icon,Button} from 'react-native-elements'
 import * as Animatable from 'react-native-animatable';
@@ -10,8 +10,7 @@ import auth from '@react-native-firebase/auth';
 const initialValues = {phone_number:'',name:"",family_name:"",password:"",email:'',username:''}
 
 
-const SignUpScreen = ({navigation}) => {
-
+const test = ({navigation}) => {
     const[passwordFocussed, setPassordFocussed] = useState(false)
     const[passwordBlured,setPasswordBlured] = useState(false)
 
@@ -49,7 +48,7 @@ const SignUpScreen = ({navigation}) => {
                     {(props)=>(
                         <View style ={styles.view2}>
                             <View>
-                                <Text style ={styles.text2}>New on XpressFood ?</Text>
+                                <Text style ={styles.text2}>New on DeliveryFood ?</Text>
                             </View>
                             <View style ={styles.view6}>
                                 <TextInput
@@ -85,7 +84,7 @@ const SignUpScreen = ({navigation}) => {
                                     <Icon
                                         name ='email'
                                         style ={styles.email}
-                                        color ={colors.grey4}
+                                        color ={colors.cardComment}
                                         type ="material"
                                     />
                                 </View>
@@ -102,7 +101,7 @@ const SignUpScreen = ({navigation}) => {
 
                             <View style = {styles.view14}>
                                 <Animatable.View animation = {passwordFocussed? "fadeInRight":"fadeInLeft"} duration = {400}>
-                                    <Icon name ="lock" color ={colors.grey4}  type = "material" />
+                                    <Icon name ="lock" color ={colors.cardComment}  type = "material" />
                                 </Animatable.View>
                                 <TextInput
                                     placeholder = "Password"
@@ -114,7 +113,7 @@ const SignUpScreen = ({navigation}) => {
                                     onBlur = {()=>{setPasswordBlured(true)}}
                                 />
                                 <Animatable.View  animation = {passwordBlured?"fadeInLeft":"fadeInRight"} duration ={400}>
-                                    <Icon name ="visibility-off" color ={colors.grey4}  type = "material" style ={{marginRight:10}}/>
+                                    <Icon name ="visibility-off" color ={colors.cardComment}  type = "material" style ={{marginRight:10}}/>
                                 </Animatable.View>
                             </View>
 
@@ -144,14 +143,14 @@ const SignUpScreen = ({navigation}) => {
                 </View>
                 <View style ={styles.view19}>
                     <View style ={styles.view20}>
-                        <Text style ={styles.text6}>Already have an account with XpressFood ?</Text>
+                        <Text style ={styles.text6}>Already have an account with DeliveryFood ?</Text>
                     </View>
                     <View style ={styles.view21}>
                         <Button
                             title = "Sign-In"
                             buttonStyle ={styles.button2}
                             titleStyle = {styles.title2}
-                            onPress ={()=>{navigation.navigate('SignInScreen')}}
+                            onPress ={()=>{navigation.navigate('Signinscreen')}}
                         />
                     </View>
                 </View>
@@ -160,7 +159,9 @@ const SignUpScreen = ({navigation}) => {
     )
 }
 
-export default SignUpScreen
+export default test
+
+
 
 const styles = StyleSheet.create({
 
