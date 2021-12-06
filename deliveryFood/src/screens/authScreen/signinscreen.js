@@ -105,8 +105,8 @@ export default function Signinscreen({navigation}){
                         buttonStyle={parameters.styledButton}
                         titleStyle={parameters.buttonTitle}
                         onPress={
-                            //navigation.navigate('drawerNavigator')
-                            props.handleSubmit
+                            navigation.navigate('drawerNavigator')
+                            //props.handleSubmit
                         }
                     />
                 </View>

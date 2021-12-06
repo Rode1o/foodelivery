@@ -26,7 +26,7 @@ export const parameters = {
         width:"100%"
     },
     buttonTitle:{
-      color:"#ffffff",
+      color:"#000000",
       fontSize: 20,
       fontWeight: "bold",
       alignItems: "center",
